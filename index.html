@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&amp;display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>AD QUIZZES</title>
+    <style>
+        body {
+            background-color: #111f2f;
+            font-family: "Poetsen One", sans-serif;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 2rem;
+            position: relative;
+        }
+
+        nav h1 {
+            color: #fff;
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li::before {
+            content: '';
+            background: cyan;
+            width: 0;
+            height: 3px;
+            position: absolute;
+            top: 20px;
+            transition: 0.5s;
+        }
+
+        #aa:hover::before {
+            width: 100%;
+        }
+
+        nav ul {
+            margin-top: 2rem;
+        }
+
+        nav ul select {
+            background: transparent;
+            color: gray;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        #text{
+            color: #6F97BF;
+            text-transform: uppercase;
+            word-spacing: 7px;
+            position: relative;
+            left: 10rem;
+            top: 5rem;
+            font-size: 1.3rem;
+        }
+        #name{
+            position: relative;
+            top: 3.5rem;
+            color: #fff;
+            left: 5.5rem;
+            font-size: 4.5rem;
+        }
+        #text2{
+            position: relative;
+            top: 3rem;
+            color: #fff;
+            left: 10.5rem;
+            font-size: 1.3rem;
+        }
+        .icons #youtube{
+            position: relative;
+            top: 5rem;
+            left: 13rem;
+        }
+        .icons #whatsapp{
+            position: relative;
+            top: 5rem;
+            left: 15rem;
+        }
+        .icons i{
+            color: #fff;
+            font-size: xx-large;
+        }
+        #image{
+            display: flex;
+            justify-content: right;
+            color: #fff;
+            font-size: 20rem;
+            position: relative;
+            bottom: 13rem;
+            right: 6rem;
+        }
+        i{
+            cursor: pointer;
+        }
+        #dd{
+            color: white;
+            text-decoration: none; /* Ensure text-decoration is not overridden */
+        }
+        @media screen and (max-width: 768px) {
+           #image {
+          display: none;
+        }
+ 
+        #name{
+            font-size: 3.5rem;
+            left: 7.2rem;
+        }
+        .content{
+            width: 500px;
+            height: 500px;
+        }
+        body{
+            width: 500px;
+            height: 500px;
+        }
+}
+
+::selection{
+    background-color: blue;
+}
+
+    </style>
+
+    <script>
+        // Function to redirect to selected page for learning
+        function redirectToLearnPage() {
+            var selectElement = document.getElementById("learn-languages");
+            var selectedValue = selectElement.value;
+            if (selectedValue !== "") {
+                window.location.href = selectedValue;
+            }
+        }
+
+        // Function to redirect to selected page for quiz
+        function redirectToQuizPage() {
+            var selectElement = document.getElementById("quiz-languages");
+            var selectedValue = selectElement.value;
+            if (selectedValue !== "") {
+                window.location.href = selectedValue;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<nav>
+    <a style="text-decoration: none;" href="#"><h1>AD QUIZZES</h1></a>
+    <ul>
+        <li id="aa"><a href="index.html">Home</a></li>
+        <li>
+            <select id="learn-languages" onchange="redirectToLearnPage()">
+                <option value="" disabled selected hidden>Learn</option>
+                <option value="html learn/index.html">HTML</option>
+                <option value="css learn/index.html">CSS</option>
+                <option value="js learn/index.html">JavaScript</option>
+            </select>
+
+            <select id="quiz-languages" onchange="redirectToQuizPage()">
+                <option value="" disabled selected hidden>Quiz</option>
+                <option value="html quiz/index.html">HTML</option>
+                <option value="css quiz/index.html">CSS</option>
+                <option value="js quiz/index.html">JavaScript</option>
+            </select>
+        </li>
+        <li id="aa"><a href="https://wa.link/e3ezdq">Contact</a></li>
+        <li id="aa"><a href="projects/index.html">Projects</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+   <p id="text"><strong>Hello, my name is</strong></p>
+   <h1 id="name"><b>Adam Abed</b></h1>
+   <p id="text2">Learn Programming</p>
+
+    <div class="icons">
+        <a href="https://youtube.com/@adamabed2013?si=tF8E0GPbDPk-Oihng"> <i id="youtube" class='bx bxl-youtube'></i></a>
+        <a href="https://wa.link/e3ezdq"><i id="whatsapp" class='bx bxl-whatsapp'></i></a>
+    </div>
+
+    <i style=" width: min-content; left: 55rem;" id="image" class='bx bxs-brain'></i>
+</div>
+
+</body>
+</html>

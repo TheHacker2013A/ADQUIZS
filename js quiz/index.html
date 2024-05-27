@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <style>
+              body {
+    background-color: #111f2f;
+}
+.all {
+    border: solid 2px #555;
+    width: 600px;
+    height: 550px;
+    position: relative;
+    border-radius: 20px;
+    left: 22rem;
+    top: 2.5rem;
+    padding: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+.question {
+    margin-bottom: 20px;
+}
+.options {
+    margin-bottom: 10px;
+}
+.next-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.result {
+    display: none;
+}
+.options{
+    position: relative;
+    top: 5rem;
+}
+button{
+    position: relative;
+    top: 5rem;
+}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <!-- First question -->
+        <div class="question" id="question1">
+            <p id="one">What does JavaScript stand for?</p>
+            <div class="options">
+                <input type="radio" id="q1_option1" name="q1" value="a">
+                <label for="q1_option1">JavaScript</label><br>
+                <br>
+                <input type="radio" id="q1_option2" name="q1" value="b">
+                <label for="q1_option2">JustScript</label><br>
+                <br>
+                <input type="radio" id="q1_option3" name="q1" value="c">
+                <label for="q1_option3">JavaCode</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(1)">Next</button>
+        </div>
+        <!-- Second question -->
+        <div class="question" id="question2" style="display: none;">
+            <p id="two">What is the correct way to write an array in JavaScript?</p>
+            <div class="options">
+                <input type="radio" id="q2_option1" name="q2" value="a">
+                <label for="q2_option1">[1, 2, 3]</label><br>
+                <br>
+                <input type="radio" id="q2_option2" name="q2" value="b">
+                <label for="q2_option2">(1, 2, 3)</label><br>
+                <br>
+                <input type="radio" id="q2_option3" name="q2" value="c">
+                <label for="q2_option3">{1, 2, 3}</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(2)">Next</button>
+        </div>
+
+        <!-- Third question -->
+        <div class="question" id="question3" style="display: none;">
+            <p id="three">Which keyword is used to declare a function in JavaScript?</p>
+            <div class="options">
+                <input type="radio" id="q3_option1" name="q3" value="a">
+                <label for="q3_option1">method</label><br>
+                <br>
+                <input type="radio" id="q3_option2" name="q3" value="b">
+                <label for="q3_option2">func</label><br>
+                <br>
+                <input type="radio" id="q3_option3" name="q3" value="c">
+                <label for="q3_option3">function</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(3)">Next</button>
+        </div>
+
+        <!-- Fourth question -->
+        <div class="question" id="question4" style="display: none;">
+            <p id="four">What does the '===' operator do in JavaScript?</p>
+            <div class="options">
+                <input type="radio" id="q4_option1" name="q4" value="a">
+                <label for="q4_option1">Checks if two values are equal without type conversion</label><br>
+                <br>
+                <input type="radio" id="q4_option2" name="q4" value="b">
+                <label for="q4_option2">Checks if two values are equal with type conversion</label><br>
+                <br>
+                <input type="radio" id="q4_option3" name="q4" value="c">
+                <label for="q4_option3">Checks if two values are not equal with type conversion</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(4)">Next</button>
+        </div>
+
+        <!-- Fifth question -->
+        <div class="question" id="question5" style="display: none;">
+            <p id="five">Which function is used to print text in the console in JavaScript?</p>
+            <div class="options">
+                <input type="radio" id="q5_option1" name="q5" value="a">
+                <label for="q5_option1">print()</label><br>
+                <br>
+                <input type="radio" id="q5_option2" name="q5" value="b">
+                <label for="q5_option2">console.log()</label><br>
+                <br>
+                <input type="radio" id="q5_option3" name="q5" value="c">
+                <label for="q5_option3">log()</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(5)">Next</button>
+        </div>
+
+        <!-- Sixth question -->
+<div class="question" id="question6" style="display: none;">
+    <p id="six">What does the 'typeof' operator in JavaScript return?</p>
+    <div class="options">
+        <input type="radio" id="q6_option1" name="q6" value="a">
+        <label for="q6_option1">The data type of a variable</label><br>
+        <br>
+        <input type="radio" id="q6_option2" name="q6" value="b">
+        <label for="q6_option2">The value of a variable</label><br>
+        <br>
+        <input type="radio" id="q6_option3" name="q6" value="c">
+        <label for="q6_option3">The name of a variable</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(6)">Next</button>
+</div>
+
+<!-- Seventh question -->
+<div class="question" id="question7" style="display: none;">
+    <p id="seven">What is the purpose of the 'break' statement in JavaScript?</p>
+    <div class="options">
+        <input type="radio" id="q7_option1" name="q7" value="a">
+        <label for="q7_option1">To terminate a loop or switch statement</label><br>
+        <br>
+        <input type="radio" id="q7_option2" name="q7" value="b">
+        <label for="q7_option2">To skip the current iteration of a loop</label><br>
+        <br>
+        <input type="radio" id="q7_option3" name="q7" value="c">
+        <label for="q7_option3">To return a value from a function</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(7)">Next</button>
+</div>
+
+<!-- Eighth question -->
+<div class="question" id="question8" style="display: none;">
+    <p id="eight">What does the 'concat()' method do in JavaScript?</p>
+    <div class="options">
+        <input type="radio" id="q8_option1" name="q8" value="a">
+        <label for="q8_option1">Concatenates two or more strings</label><br>
+        <br>
+        <input type="radio" id="q8_option2" name="q8" value="b">
+        <label for="q8_option2">Compares two strings</label><br>
+        <br>
+        <input type="radio" id="q8_option3" name="q8" value="c">
+        <label for="q8_option3">Returns the length of a string</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(8)">Next</button>
+</div>
+
+<!-- Ninth question -->
+<div class="question" id="question9" style="display: none;">
+    <p id="nine">Which statement is used to declare a variable in JavaScript?</p>
+    <div class="options">
+        <input type="radio" id="q9_option1" name="q9" value="a">
+        <label for="q9_option1">var</label><br>
+        <br>
+        <input type="radio" id="q9_option2" name="q9" value="b">
+        <label for="q9_option2">let</label><br>
+        <br>
+        <input type="radio" id="q9_option3" name="q9" value="c">
+        <label for="q9_option3">const</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(9)">Next</button>
+</div>
+
+<!-- Tenth question -->
+<div class="question" id="question10" style="display: none;">
+    <p id="ten">What is the purpose of the 'addEventListener()' method in JavaScript?</p>
+    <div class="options">
+        <input type="radio" id="q10_option1" name="q10" value="a">
+        <label for="q10_option1">To attach an event handler to an element</label><br>
+        <br>
+        <input type="radio" id="q10_option2" name="q10" value="b">
+        <label for="q10_option2">To remove an event handler from an element</label><br>
+        <br>
+        <input type="radio" id="q10_option3" name="q10" value="c">
+        <label for="q10_option3">To create a new event</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(10)">Next</button>
+</div>
+
+
+        <!-- JavaScript code -->
+        <script>
+            const questions = document.querySelectorAll('.question');
+            let currentQuestion = 0;
+            let score = 0;
+
+            function showNextQuestion(questionIndex) {
+                const selectedOption = document.querySelector(`input[name="q${questionIndex}"]:checked`);
+                if (selectedOption) {
+                    const isCorrect = checkAnswer(questionIndex, selectedOption.value);
+                    if (isCorrect) score++;
+                    questions[currentQuestion].style.display = 'none';
+                    currentQuestion++;
+                    if (currentQuestion < questions.length) {
+                        questions[currentQuestion].style.display = 'block';
+                    } else {
+                        showResult();
+                    }
+                } else {
+                    alert('Please select an answer.');
+                }
+            }
+
+            function checkAnswer(questionIndex, selectedValue) {
+                const correctAnswers = {
+                    1: 'a',
+                    2: 'a',
+                    3: 'c',
+                    4: 'a',
+                    5: 'b',
+                    6: 'a',
+                    7: 'a',
+                    8: 'a',
+                    9: 'a',
+                    10: 'a',
+                };
+                return correctAnswers[questionIndex] === selectedValue;
+            }
+
+            function showResult() {
+                const totalQuestions = questions.length; // Total number of questions
+                alert(`Your score is ${score}/${totalQuestions}`);
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Quiz</title>
+    <style>
+        body {
+    background-color: #111f2f;
+}
+.all {
+    border: solid 2px #555;
+    width: 600px;
+    height: 550px;
+    position: relative;
+    border-radius: 20px;
+    left: 22rem;
+    top: 2.5rem;
+    padding: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+.question {
+    margin-bottom: 20px;
+}
+.options {
+    margin-bottom: 10px;
+}
+.next-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.result {
+    display: none;
+}
+.options{
+    position: relative;
+    top: 5rem;
+}
+button{
+    position: relative;
+    top: 5rem;
+}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <!-- First question -->
+        <div class="question" id="question1">
+            <p id="one">What does CSS stand for?</p>
+            <div class="options">
+                <input type="radio" id="q1_option1" name="q1" value="a">
+                <label for="q1_option1">Cascading Style Sheets</label><br>
+                <br>
+                <input type="radio" id="q1_option2" name="q1" value="b">
+                <label for="q1_option2">Creative Style Solutions</label><br>
+                <br>
+                <input type="radio" id="q1_option3" name="q1" value="c">
+                <label for="q1_option3">Computer Style Software</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(1)">Next</button>
+        </div>
+        <!-- Second question -->
+        <div class="question" id="question2" style="display: none;">
+            <p id="two">Which CSS property is used to control the text size?</p>
+            <div class="options">
+                <input type="radio" id="q2_option1" name="q2" value="a">
+                <label for="q2_option1">font-size</label><br>
+                <br>
+                <input type="radio" id="q2_option2" name="q2" value="b">
+                <label for="q2_option2">text-size</label><br>
+                <br>
+                <input type="radio" id="q2_option3" name="q2" value="c">
+                <label for="q2_option3">font-style</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(2)">Next</button>
+        </div>
+
+        <!-- Third question -->
+        <div class="question" id="question3" style="display: none;">
+            <p id="three">Which CSS property is used to change the background color of an element?</p>
+            <div class="options">
+                <input type="radio" id="q3_option1" name="q3" value="a">
+                <label for="q3_option1">background-color</label><br>
+                <br>
+                <input type="radio" id="q3_option2" name="q3" value="b">
+                <label for="q3_option2">color</label><br>
+                <br>
+                <input type="radio" id="q3_option3" name="q3" value="c">
+                <label for="q3_option3">text-color</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(3)">Next</button>
+        </div>
+
+        <!-- Fourth question -->
+        <div class="question" id="question4" style="display: none;">
+            <p id="four">What does CSS specificity refer to?</p>
+            <div class="options">
+                <input type="radio" id="q4_option1" name="q4" value="a">
+                <label for="q4_option1">The order in which CSS rules are written</label><br>
+                <br>
+                <input type="radio" id="q4_option2" name="q4" value="b">
+                <label for="q4_option2">The importance of CSS rules</label><br>
+                <br>
+                <input type="radio" id="q4_option3" name="q4" value="c">
+                <label for="q4_option3">The specificity of selectors</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(4)">Next</button>
+        </div>
+
+        <!-- Fifth question -->
+        <div class="question" id="question5" style="display: none;">
+            <p id="five">Which CSS property is used to create space around elements?</p>
+            <div class="options">
+                <input type="radio" id="q5_option1" name="q5" value="a">
+                <label for="q5_option1">margin</label><br>
+                <br>
+                <input type="radio" id="q5_option2" name="q5" value="b">
+                <label for="q5_option2">padding</label><br>
+                <br>
+                <input type="radio" id="q5_option3" name="q5" value="c">
+                <label for="q5_option3">border</label><br>
+                <br>
+            </div>
+            <button class="next-btn" onclick="showNextQuestion(5)">Next</button>
+        </div>
+
+       <!-- Sixth question -->
+<div class="question" id="question6" style="display: none;">
+    <p id="six">What does the CSS property "display: none;" do?</p>
+    <div class="options">
+        <input type="radio" id="q6_option1" name="q6" value="a">
+        <label for="q6_option1">Hides the element from the display</label><br>
+        <br>
+        <input type="radio" id="q6_option2" name="q6" value="b">
+        <label for="q6_option2">Makes the element transparent</label><br>
+        <br>
+        <input type="radio" id="q6_option3" name="q6" value="c">
+        <label for="q6_option3">Adds a border around the element</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(6)">Next</button>
+</div>
+
+<!-- Seventh question -->
+<div class="question" id="question7" style="display: none;">
+    <p id="seven">Which CSS property is used to control the spacing between letters in text?</p>
+    <div class="options">
+        <input type="radio" id="q7_option1" name="q7" value="a">
+        <label for="q7_option1">letter-spacing</label><br>
+        <br>
+        <input type="radio" id="q7_option2" name="q7" value="b">
+        <label for="q7_option2">word-spacing</label><br>
+        <br>
+        <input type="radio" id="q7_option3" name="q7" value="c">
+        <label for="q7_option3">line-height</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(7)">Next</button>
+</div>
+
+<!-- Eighth question -->
+<div class="question" id="question8" style="display: none;">
+    <p id="eight">Which CSS property is used to make text italic?</p>
+    <div class="options">
+        <input type="radio" id="q8_option1" name="q8" value="a">
+        <label for="q8_option1">font-weight</label><br>
+        <br>
+        <input type="radio" id="q8_option2" name="q8" value="b">
+        <label for="q8_option2">font-style</label><br>
+        <br>
+        <input type="radio" id="q8_option3" name="q8" value="c">
+        <label for="q8_option3">text-decoration</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(8)">Next</button>
+</div>
+
+<!-- Ninth question -->
+<div class="question" id="question9" style="display: none;">
+    <p id="nine">Which CSS property is used to align text vertically?</p>
+    <div class="options">
+        <input type="radio" id="q9_option1" name="q9" value="a">
+        <label for="q9_option1">text-align</label><br>
+        <br>
+        <input type="radio" id="q9_option2" name="q9" value="b">
+        <label for="q9_option2">vertical-align</label><br>
+        <br>
+        <input type="radio" id="q9_option3" name="q9" value="c">
+        <label for="q9_option3">align-content</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(9)">Next</button>
+</div>
+
+<!-- Tenth question -->
+<div class="question" id="question10" style="display: none;">
+    <p id="ten">Which CSS property is used to specify the space between the content and its border?</p>
+    <div class="options">
+        <input type="radio" id="q10_option1" name="q10" value="a">
+        <label for="q10_option1">margin</label><br>
+        <br>
+        <input type="radio" id="q10_option2" name="q10" value="b">
+        <label for="q10_option2">padding</label><br>
+        <br>
+        <input type="radio" id="q10_option3" name="q10" value="c">
+        <label for="q10_option3">border-spacing</label><br>
+        <br>
+    </div>
+    <button class="next-btn" onclick="showNextQuestion(10)">Next</button>
+</div>
+
+<!-- JavaScript functions -->
+<script>
+    const questions = document.querySelectorAll('.question');
+    let currentQuestion = 0;
+    let score = 0;
+
+    function showNextQuestion(questionIndex) {
+        const selectedOption = document.querySelector(`input[name="q${questionIndex}"]:checked`);
+        if (selectedOption) {
+            const isCorrect = checkAnswer(questionIndex, selectedOption.value);
+            if (isCorrect) score++;
+            questions[currentQuestion].style.display = 'none';
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                questions[currentQuestion].style.display = 'block';
+            } else {
+                showResult();
+            }
+        } else {
+            alert('Please select an answer.');
+        }
+    }
+
+    function checkAnswer(questionIndex, selectedValue) {
+        const correctAnswers = {
+            1: 'a',
+            2: 'a',
+            3: 'a',
+            4: 'c',
+            5: 'a',
+            6: 'a', // Correct answer for question 6
+            7: 'a', // Correct answer for question 7
+            8: 'b', // Correct answer for question 8
+            9: 'b', // Correct answer for question 9
+            10: 'b', // Correct answer for question 10
+        };
+        return correctAnswers[questionIndex] === selectedValue;
+    }
+
+    function showResult() {
+        const totalQuestions = questions.length; // Total number of questions
+        alert(`Your score is ${score}/${totalQuestions}`);
+    }
+</script>
